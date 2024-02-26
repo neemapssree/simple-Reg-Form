@@ -12,8 +12,18 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post('https://simple-reg-form-back-end.onrender.com/register', {name,email,password})
-    .then(result => console.log(result))
-    .catch(err => console.log(err))
+    .then((result) => {
+      console.log(result);
+      if(result.status === 201){
+        alert('Registration successful');
+      }
+      else{
+        alert('Registration unsuccessful!');
+      }
+    })
+    .catch((err) => {
+      console.log(err)
+    });
   };
 
   return (
