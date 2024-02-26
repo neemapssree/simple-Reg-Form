@@ -1,1 +1,1 @@
-export const BASE_URL = 'http://127.0.0.1:4000/register';
+export const BASE_URL = 'https://simple-reg-form-back-end.onrender.com';

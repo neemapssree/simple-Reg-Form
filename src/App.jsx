@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import { BASE_URL } from './constants/Constants';
 
 function App() {  
 
@@ -12,7 +11,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(BASE_URL, {name,email,password})
+    axios.post('https://simple-reg-form-back-end.onrender.com/register', {name,email,password})
     .then(result => console.log(result))
     .catch(err => console.log(err))
   };
