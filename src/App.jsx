@@ -14,7 +14,7 @@ function App() {
     axios.post('https://simple-reg-form-back-end.onrender.com/register', {name,email,password})
     .then((result) => {
       console.log(result);
-      if(result.status === 201){
+      if(result.data === "Registered successfully"){
         alert('Registration successful');
       }
       else{
